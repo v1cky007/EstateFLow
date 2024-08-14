@@ -1,0 +1,231 @@
+/* AboutPage.css */
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(to right, #f4f4f4, #e0e0e0);
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    animation: fadeIn 1s ease-out;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+  }
+  
+  .about-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    border-radius: 12px;
+    transition: background 0.3s ease;
+  }
+  
+  .about-content:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-left {
+    flex: 1;
+    padding-right: 30px;
+    position: relative;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  .about-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 1px;
+  }
+  
+  .about-header h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: #007BFF;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+  
+  .about-header p {
+    font-size: 1.6rem;
+    color: #666;
+    font-weight: 300;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-section {
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .about-section:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .about-section:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .about-section:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  .about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #444;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .about-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #007BFF;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  .about-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+  }
+  
+  .team-member {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+    background-color: #e0f7fa;
+  }
+  
+  .team-info {
+    margin-left: 25px;
+  }
+  
+  .team-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .team-info p {
+    font-size: 1.2rem;
+    color: #777;
+  }
+  
+  .about-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .about-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transform: scale(1);
+    transition: transform 0.5s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    filter: brightness(1.1);
+    border: 2px solid #ddd;
+  }
+  
+  .about-right img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.2);
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .about-left, .about-right {
+      flex: none;
+      width: 100%;
+    }
+  
+    .about-right img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

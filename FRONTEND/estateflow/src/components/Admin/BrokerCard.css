@@ -1,0 +1,60 @@
+/* src/components/BrokerCards.css */
+
+.broker-cards-container {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
+  }
+  
+  .broker-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* 4 cards per row with gap */
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .broker-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .broker-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  
+  .broker-card p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .broker-card-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+  }
+  
+  .broker-card-button:hover {
+    background-color: #45a049; /* Darker green */
+  }
+  
+  .broker-card-deny {
+    background-color: #f44336; /* Red */
+  }
+  
+  .broker-card-deny:hover {
+    background-color: #e53935; /* Darker red */
+  }
+  

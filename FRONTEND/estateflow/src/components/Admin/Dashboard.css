@@ -1,0 +1,185 @@
+/* Define CSS Variables for Light and Dark Mode */
+:root {
+    --background-color-light: #F0F4F8;
+    --background-color-dark: #1E1E1E;
+    --card-background-light: #FFFFFF;
+    --card-background-dark: #2D2D2D;
+    --text-color-light: #333;
+    --text-color-dark: #E0E0E0;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+    --primary-color: #007BFF;
+}
+
+[data-theme='dark'] {
+    --background-color-light: #1E1E1E;
+    --background-color-dark: #2D2D2D;
+    --card-background-light: #2D2D2D;
+    --card-background-dark: #1E1E1E;
+    --text-color-light: #E0E0E0;
+    --text-color-dark: #333;
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+}
+
+/* General Styles */
+.dashboard {
+    display: flex;
+    background-color: var(--background-color-light);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: var(--card-background-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    margin-left: 250px; /* Adjust based on Sidebar width */
+    transition: margin-left 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--text-color-light);
+}
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Card Styles */
+.card {
+    background: linear-gradient(135deg, var(--card-background-light) 0%, #F9F9F9 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    padding: 25px;
+    width: calc(25% - 20px); /* Adjust the width as needed */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-dark);
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--text-color-light);
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-color-light);
+}
+
+/* Charts */
+.charts {
+    display: flex;
+    flex-direction: column; /* Stack charts vertically */
+    gap: 20px; /* Space between charts */
+    margin-top: 30px;
+}
+
+.chart {
+    background: var(--card-background-light);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    padding: 25px;
+    width: 100%; /* Full width for each chart */
+    text-align: center;
+}
+
+/* Recent Activity */
+.recent-activity {
+    margin-top: 30px;
+}
+
+.recent-activity h2 {
+    font-size: 22px;
+    color: var(--text-color-light);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.recent-activity ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-activity li {
+    background: var(--card-background-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.recent-activity li:hover {
+    background-color: #F1F5F9;
+}
+
+.recent-activity p {
+    margin: 0;
+    color: var(--text-color-light);
+}
+
+.recent-activity span {
+    display: block;
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Management Sections */
+.user-management, .transaction-management, .property-management, .settings {
+    margin-top: 30px;
+}
+
+.user-management h2,
+.transaction-management h2,
+.property-management h2,
+.settings h2 {
+    font-size: 22px;
+    color: var(--text-color-light);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .cards-container .card {
+        width: calc(33.333% - 20px); /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container .card {
+        width: calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+
+    .dashboard-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .charts {
+        flex-direction: column; /* Ensure charts stack vertically on small screens */
+    }
+
+    .chart {
+        margin-bottom: 20px;
+    }
+}

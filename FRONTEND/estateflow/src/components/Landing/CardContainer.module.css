@@ -1,0 +1,19 @@
+.featuresSection {
+    padding: 2rem;
+    background-color: #f8f9fa;
+  }
+  
+  .featuresHeading {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+  

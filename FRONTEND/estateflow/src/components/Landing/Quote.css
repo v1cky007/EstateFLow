@@ -1,0 +1,76 @@
+/* Quote.css */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quote-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.quote-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Add a dark overlay for better text visibility */
+  transition: background 0.3s ease-in-out;
+}
+
+.quote-section:hover::before {
+  background: rgba(0, 0, 0, 0.6); /* Darken overlay on hover */
+}
+
+.quote-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2); /* Light background for text */
+  border-radius: 15px;
+  backdrop-filter: blur(10px); /* Blur effect for background */
+  animation: fadeIn 0.9s ease-in-out;
+}
+
+.quote-text h1 {
+  font-size: 3em;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 0.3s;
+}
+
+/* Additional Styling */
+.quote-text:hover {
+  background: rgba(255, 255, 255, 0.3); /* Slightly lighter background on hover */
+  backdrop-filter: blur(12px);
+}
+
+@media (max-width: 768px) {
+  .quote-text h1 {
+    font-size: 2em;
+  }
+
+  .quote-text {
+    padding: 20px;
+  }
+}

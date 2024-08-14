@@ -1,0 +1,49 @@
+/* src/components/RecentActivity.css */
+
+.recent-activity {
+    margin-top: 30px;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recent-activity h2 {
+    font-size: 22px;
+    color: #333;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.recent-activity ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-activity li {
+    background: #F9F9F9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.recent-activity li:hover {
+    background-color: #E1E5EB;
+}
+
+.recent-activity p {
+    margin: 0;
+    color: #444;
+    font-size: 16px;
+}
+
+.recent-activity span {
+    display: block;
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}

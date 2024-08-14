@@ -1,0 +1,90 @@
+/* AboutUs.css */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.about-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.about-us-content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  backdrop-filter: blur(10px);
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.about-us-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: pulse 1s infinite;
+}
+
+.about-us-content h1 {
+  font-size: 2.8em;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  animation: rotateIn 1.5s ease-in-out;
+}
+
+.about-us-content p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+  animation: fadeInUp 1.8s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .about-us-content h1 {
+    font-size: 2em;
+  }
+
+  .about-us-content p {
+    font-size: 1em;
+  }
+}
