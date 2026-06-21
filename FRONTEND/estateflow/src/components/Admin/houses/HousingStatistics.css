@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 16px;
+  margin-top: 20px; /* Add some margin to separate from other content */
+}
+
+.stat-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 12px;
+  width: 220px;
+  background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(30deg);
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.stat-card:hover::before {
+  top: -25%;
+  left: -25%;
+  transform: rotate(45deg);
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card h2 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.stat-card p {
+  font-size: 28px;
+  margin: 0;
+  color: white; /* Ensure the text color contrasts with the background */
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.stat-card {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.stat-card:hover {
+  animation: pulse 0.5s ease-in-out forwards;
+}
+
+.stats-container .stat-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stats-container .stat-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stats-container .stat-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.stats-container .stat-card:nth-child(4) {
+  animation-delay: 0.4s;
+}

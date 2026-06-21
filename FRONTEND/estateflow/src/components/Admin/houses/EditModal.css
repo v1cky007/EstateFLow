@@ -1,0 +1,64 @@
+/* EditModal.css */
+.edit-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .edit-modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .edit-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: #dc3545;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-modal-content h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .edit-modal-content input,
+  .edit-modal-content textarea,
+  .edit-modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .edit-modal-content button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-modal-content button:hover {
+    background-color: #218838;
+  }
+  

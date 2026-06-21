@@ -1,0 +1,56 @@
+.broker-table-container {
+  padding: 40px; /* Increased padding for more space around the table */
+}
+
+.broker-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.broker-thead {
+  background-color: #2c3e50;
+}
+
+.broker-thead th {
+  padding: 30px; /* Increased padding for larger header cells */
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px; /* Larger font size */
+  color: white;
+}
+
+.broker-tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.broker-tbody td {
+  padding: 15px; /* Increased padding for larger body cells */
+  font-size: 16px; /* Larger font size */
+}
+
+.broker-btn-edit {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Increased padding for larger buttons */
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 16px; /* Larger font size */
+}
+
+.broker-btn-delete {
+  background-color: #f44336; /* Red */
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Increased padding for larger buttons */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; /* Larger font size */
+}
+
+.broker-btn-edit:hover,
+.broker-btn-delete:hover {
+  opacity: 0.9;
+}
